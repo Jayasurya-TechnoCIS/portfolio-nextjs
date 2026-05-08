@@ -1,0 +1,12 @@
+.git
+.github
+.next
+node_modules
+npm-debug.log*
+Dockerfile
+.dockerignore
+.env
+.env*.local
+README.md
+MOBILE_MENU_ANALYSIS.md
+tsconfig.tsbuildinfo
