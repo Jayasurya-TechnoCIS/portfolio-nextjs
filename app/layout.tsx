@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Syne, Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/ThemeProvider";
 import "./globals.css";
 
 const syne = Syne({
@@ -18,6 +17,11 @@ export const metadata: Metadata = {
   description: "Full Stack Web Developer Portfolio",
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,9 +34,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-full flex flex-col transition-colors duration-300 font-sans">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          {children}
-        </ThemeProvider>
+        {children}
       </body>
     </html>
   );

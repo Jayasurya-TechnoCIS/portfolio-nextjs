@@ -22,6 +22,7 @@
     --color-brand-border: #e4e4e7;
     --color-brand-btn: #0ea5e9;
     --color-brand-btn-text: #ffffff;
+    color-scheme: light;
   }
   
   .dark {
@@ -32,6 +33,70 @@
     --color-brand-border: #27272a;
     --color-brand-btn: #0ea5e9;
     --color-brand-btn-text: #ffffff;
+    color-scheme: dark;
+  }
+
+  body:has(.theme-toggle-checkbox:checked) {
+    --color-brand-bg: #000000;
+    --color-brand-card: #09090b;
+    --color-brand-text: #f4f4f5;
+    --color-brand-text-muted: #a1a1aa;
+    --color-brand-border: #27272a;
+    --color-brand-btn: #0ea5e9;
+    --color-brand-btn-text: #ffffff;
+    color-scheme: dark;
+  }
+
+  .theme-toggle-sun {
+    display: none;
+  }
+
+  .theme-toggle-checkbox:checked ~ .theme-toggle-moon {
+    display: none;
+  }
+
+  .theme-toggle-checkbox:checked ~ .theme-toggle-sun {
+    display: block;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-brand-bg: #000000;
+      --color-brand-card: #09090b;
+      --color-brand-text: #f4f4f5;
+      --color-brand-text-muted: #a1a1aa;
+      --color-brand-border: #27272a;
+      --color-brand-btn: #0ea5e9;
+      --color-brand-btn-text: #ffffff;
+      color-scheme: dark;
+    }
+
+    body:has(.theme-toggle-checkbox:checked) {
+      --color-brand-bg: #f4f5f8;
+      --color-brand-card: #ffffff;
+      --color-brand-text: #18181b;
+      --color-brand-text-muted: #71717a;
+      --color-brand-border: #e4e4e7;
+      --color-brand-btn: #0ea5e9;
+      --color-brand-btn-text: #ffffff;
+      color-scheme: light;
+    }
+
+    .theme-toggle-moon {
+      display: none;
+    }
+
+    .theme-toggle-sun {
+      display: block;
+    }
+
+    .theme-toggle-checkbox:checked ~ .theme-toggle-moon {
+      display: block;
+    }
+
+    .theme-toggle-checkbox:checked ~ .theme-toggle-sun {
+      display: none;
+    }
   }
   
   body {

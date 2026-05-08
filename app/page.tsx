@@ -1,12 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ThemeToggle } from "@/components/ThemeToggle";
+import { SiteHeader } from "@/components/SiteHeader";
 import {
-  ArrowRight,
   Code2,
   TerminalSquare,
   Palette,
-  ExternalLink,
   Layers,
   Box,
 } from "lucide-react";
@@ -15,56 +12,20 @@ export default function Home() {
   return (
     <main className="min-h-screen p-4 md:p-6 lg:p-8 space-y-6 max-w-[1600px] mx-auto text-[var(--color-brand-text)] font-sans">
       {/* 1. HERO SECTION */}
-      <section className="bg-[var(--color-brand-card)] rounded-[2.5rem] p-6 text-center md:text-left md:p-12 relative shadow-sm border border-[var(--color-brand-border)] min-h-[85vh] flex flex-col">
+      <section
+        id="home"
+        className="bg-[var(--color-brand-card)] rounded-[2.5rem] p-6 text-center md:text-left md:p-12 relative shadow-sm border border-[var(--color-brand-border)] min-h-[85vh] flex flex-col"
+      >
         {/* Navbar */}
-        <header className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 relative z-20">
-          <div className="text-2xl font-black font-display tracking-tight">
-            JS
-          </div>
-
-          <nav className="flex gap-8 text-sm font-semibold tracking-wide text-[var(--color-brand-text-muted)]">
-            <a href="#home" className="text-[var(--color-brand-text)]">
-              Home
-            </a>
-            <a
-              href="#about"
-              className="hover:text-[var(--color-brand-text)] transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#skills"
-              className="hover:text-[var(--color-brand-text)] transition-colors"
-            >
-              Skills
-            </a>
-            <a
-              href="#services"
-              className="hover:text-[var(--color-brand-text)] transition-colors"
-            >
-              Services
-            </a>
-            <a
-              href="#works"
-              className="hover:text-[var(--color-brand-text)] transition-colors"
-            >
-              Works
-            </a>
-          </nav>
-
-          <div className="flex items-center gap-4">
-            <ThemeToggle />
-            <button className="bg-[var(--color-brand-btn)] text-[var(--color-brand-btn-text)] px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider hover:opacity-90 transition-opacity">
-              Let's Talk
-            </button>
-          </div>
-        </header>
+        <SiteHeader />
 
         {/* Hero Content */}
         <div className="flex-1 grid grid-cols-1 md:grid-cols-12 gap-8 items-center relative">
           {/* Left Text */}
           <div className="md:col-span-8 z-20 flex flex-col items-center md:items-start text-center md:text-left">
-            <h2 className="text-xl md:text-2xl font-bold mb-2">Hello, I'm</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-2">
+              Hello, I&apos;m
+            </h2>
             <h1 className="text-3xl md:text-4xl font-black font-display tracking-tighter uppercase mb-6 leading-none">
               JAYASURYA SUBRAMANI
             </h1>
@@ -446,7 +407,7 @@ export default function Home() {
       <footer className="py-12 text-center text-[var(--color-brand-text-muted)] font-semibold text-sm">
         <h2 className="text-3xl md:text-5xl font-black font-display tracking-widest uppercase mb-10 text-[var(--color-brand-text)] flex items-center justify-center gap-4">
           <span className="w-8 h-[2px] bg-[var(--color-brand-text)]"></span>
-          LET'S WORK
+          LET&apos;S WORK
           <span className="w-8 h-[2px] bg-[var(--color-brand-text)]"></span>
         </h2>
         <p>

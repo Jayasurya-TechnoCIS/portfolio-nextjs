@@ -1,26 +1,21 @@
-"use client";
-
-import { useTheme } from "next-themes";
 import { Moon, Sun } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const currentTheme = mounted ? resolvedTheme : "light";
-
   return (
-    <button
-      onClick={() => setTheme(currentTheme === "dark" ? "light" : "dark")}
-      className="p-2 rounded-full hover:bg-neutral-200 dark:hover:bg-neutral-800 transition-colors"
-      aria-label="Toggle Theme"
-    >
-      {currentTheme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-    </button>
+    <label className="relative inline-flex min-h-11 min-w-11 touch-manipulation cursor-pointer items-center justify-center rounded-full border border-transparent transition-colors hover:bg-neutral-200 active:scale-95">
+      <input
+        type="checkbox"
+        className="theme-toggle-checkbox sr-only"
+        aria-label="Toggle theme"
+      />
+      <Moon
+        size={20}
+        className="theme-toggle-moon text-[var(--color-brand-text)]"
+      />
+      <Sun
+        size={20}
+        className="theme-toggle-sun text-[var(--color-brand-text)]"
+      />
+    </label>
   );
 }
