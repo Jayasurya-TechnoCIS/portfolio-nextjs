@@ -103,4 +103,146 @@
     background-color: var(--color-brand-bg);
     color: var(--color-brand-text);
   }
+
+  .markdown-content {
+    font-size: 1rem;
+    line-height: 1.8;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .markdown-content p {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    color: var(--color-brand-text-muted);
+  }
+
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3,
+  .markdown-content h4 {
+    font-family: var(--font-syne), sans-serif;
+    font-weight: 800;
+    color: var(--color-brand-text);
+    text-transform: uppercase;
+    letter-spacing: -0.025em;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .markdown-content h1 { font-size: 2rem; }
+  .markdown-content h2 { font-size: 1.625rem; border-bottom: 1px solid var(--color-brand-border); padding-bottom: 0.5rem; }
+  .markdown-content h3 { font-size: 1.375rem; }
+  .markdown-content h4 { font-size: 1.125rem; }
+
+  .markdown-content ul,
+  .markdown-content ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.75rem;
+    color: var(--color-brand-text-muted);
+    font-weight: 500;
+  }
+
+  .markdown-content ul {
+    list-style-type: disc;
+  }
+
+  .markdown-content ol {
+    list-style-type: decimal;
+  }
+
+  .markdown-content li {
+    margin-bottom: 0.5rem;
+  }
+
+  .markdown-content li::marker {
+    color: var(--color-brand-btn);
+  }
+
+  .markdown-content pre {
+    background-color: var(--color-brand-bg);
+    border: 1px solid var(--color-brand-border);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    overflow-x: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .markdown-content code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 0.875em;
+    background-color: var(--color-brand-bg);
+    border: 1px solid var(--color-brand-border);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.375rem;
+    color: var(--color-brand-text);
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  .markdown-content pre code {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+    color: inherit;
+  }
+
+  .markdown-content blockquote {
+    border-left: 4px solid var(--color-brand-btn);
+    padding-left: 1.5rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: var(--color-brand-text-muted);
+    background-color: var(--color-brand-bg);
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .markdown-content a {
+    color: var(--color-brand-btn);
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    transition: opacity 0.2s;
+    word-break: break-all;
+    overflow-wrap: anywhere;
+  }
+
+  .markdown-content a:hover {
+    opacity: 0.8;
+  }
+
+  .markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--color-brand-border);
+  }
+
+  .markdown-content hr {
+    border: 0;
+    border-top: 1px solid var(--color-brand-border);
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .markdown-content strong {
+    color: var(--color-brand-text);
+    font-weight: 700;
+  }
 }
