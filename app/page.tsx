@@ -1,12 +1,6 @@
 import Link from "next/link";
 import { SiteHeader } from "@/components/SiteHeader";
-import {
-  Code2,
-  TerminalSquare,
-  Palette,
-  Layers,
-  Box,
-} from "lucide-react";
+import { Code2, TerminalSquare, Palette, Layers, Box } from "lucide-react";
 
 export default function Home() {
   return (
@@ -30,9 +24,8 @@ export default function Home() {
               JAYASURYA SUBRAMANI
             </h1>
             <p className="text-[var(--color-brand-text-muted)] leading-relaxed max-w-md mb-6 font-medium">
-              Full Stack Web Developer with 4.5+ years of experience blending
-              design logic with robust code using Angular, NestJS, NextJS and
-              .NET MVC architectures.
+              Full Stack Web Developer experienced with blending design logic
+              with robust code using React, Angular, NestJS, NextJS Frameworks.
             </p>
             <div className="flex items-center gap-4 text-sm font-bold opacity-70">
               <span>sjayasurya2504@gmail.com</span>
@@ -87,14 +80,34 @@ export default function Home() {
           <h2 className="text-3xl md:text-5xl font-black font-display tracking-widest uppercase mb-16 opacity-10">
             + ABOUT ME +
           </h2>
+          <h3 className="text-lg text-justify font-bold max-w-3xl mx-auto leading-relaxed mb-2">
+            I am a Fullstack Developer, ex-startup founder, and technology
+            enthusiast with a deep passion for bridging the gap between software
+            and hardware. With over four and a half years of hands-on
+            experience, my drive extends far beyond writing code—I am on a
+            mission to contribute to the world by inventing, discovering, and
+            sharing knowledge that pushes the boundaries of what technology can
+            achieve.
+          </h3>
+          <h3 className="text-lg text-justify font-bold max-w-3xl mx-auto leading-relaxed mb-2">
+            Throughout my career, I have architected and delivered complex,
+            scalable solutions, ranging from Healthcare Electronic Medical
+            Records (EMR) and Learning Management Systems (LMS) to secure
+            internal platforms. My technical foundation spans modern frontend
+            frameworks like Angular and React and seamless CI/CD cloud
+            deployments across AWS and Azure. Because I also have a strong
+            background in UI design and tools like Figma, I am able to oversee
+            the entire lifecycle of a product—from the first pixel to the final
+            deployment.
+          </h3>
           <h3 className="text-lg text-justify font-bold max-w-3xl mx-auto leading-relaxed">
-            Experienced in building scalable web
-            applications using Angular, NestJS, .NET Web API, PostgreSQL, and
-            MySQL. Skilled in developing monolithic applications with Layered
-            Architecture (3-Tier Architecture), REST APIs, and clean backend
-            patterns like Controller-Service-Repository. Experienced with
-            Docker, GitHub Actions, AWS S3, Azure, and CI/CD workflows for
-            reliable deployment and cloud-based infrastructure management.
+            My entrepreneurial background fundamentally shapes how I approach
+            engineering. I don't just see a tech stack; I see the potential to
+            build solutions that matter. Whether I am integrating cutting-edge
+            AI tools into an application, exploring novel hardware-software
+            interactions, or mastering new frameworks, my ultimate goal remains
+            the same: to build innovative products that leave a lasting,
+            positive impact and advance the way we interact with the world.
           </h3>
         </div>
       </section>
@@ -132,7 +145,6 @@ export default function Home() {
             </h4>
             <ul className="text-left space-y-2 font-bold text-base">
               <li>NestJS</li>
-              <li>.NET Web API / MVC</li>
               <li>NodeJS</li>
               <li>REST API Development</li>
             </ul>
@@ -276,7 +288,7 @@ export default function Home() {
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Angular
                   </span>
-                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
+                  <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Bootstrap CSS
                   </span>
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
@@ -313,7 +325,7 @@ export default function Home() {
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Angular
                   </span>
-                    <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
+                  <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Tailwind CSS
                   </span>
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
@@ -353,7 +365,7 @@ export default function Home() {
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Angular
                   </span>
-                    <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
+                  <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Tailwind CSS
                   </span>
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
@@ -362,7 +374,7 @@ export default function Home() {
                   <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     PostgreSQL
                   </span>
-                    <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
+                  <span className="bg-[var(--color-brand-bg)] px-3 py-1 rounded-full border border-[var(--color-brand-border)]">
                     Opensource Services
                   </span>
                 </div>
