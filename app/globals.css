@@ -59,7 +59,7 @@
     display: block;
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: light) {
     :root {
       --color-brand-bg: #000000;
       --color-brand-card: #09090b;
