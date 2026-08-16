@@ -9,6 +9,8 @@ interface DocPageProps {
   params: Promise<{ id: string }>;
 }
 
+export const dynamic = "force-dynamic";
+
 export async function generateMetadata({ params }: DocPageProps): Promise<Metadata> {
   const { id } = await params;
   const doc = await getDocsById(id);
@@ -42,7 +44,7 @@ export default async function DocPage({ params }: DocPageProps) {
   const parsedContent = await marked.parse(doc.content);
 
   return (
-    <main className="min-h-screen p-4 md:p-8 max-w-[400px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-[1500px] mx-auto text-[var(--color-brand-text)] font-sans">
+    <main suppressHydrationWarning className="min-h-screen p-4 md:p-8 max-w-[400px] md:max-w-[750px] lg:max-w-[1000px] xl:max-w-[1500px] mx-auto text-[var(--color-brand-text)] font-sans">
       <Link
         href="/docs"
         className="inline-flex items-center gap-2 mb-8 hover:opacity-70 transition-opacity font-bold uppercase tracking-wider text-sm text-[var(--color-brand-text-muted)] hover:text-[var(--color-brand-text)]"

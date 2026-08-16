@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   title: "Docs | Internal",
 };
 
+export const dynamic = "force-dynamic";
+
 export default async function DocsListingPage() {
   const docs: Docs[] = await getAllDocs();
   
@@ -14,7 +16,7 @@ export default async function DocsListingPage() {
   const publishedDocs = docs.filter((doc) => doc.status === "published");
 
   return (
-    <main className="min-h-screen p-4 md:p-6 lg:p-8 space-y-6 max-w-[1600px] mx-auto text-[var(--color-brand-text)] font-sans">
+    <main suppressHydrationWarning className="min-h-screen p-4 md:p-6 lg:p-8 space-y-6 max-w-[1600px] mx-auto text-[var(--color-brand-text)] font-sans">
       <div className="bg-[var(--color-brand-card)] rounded-[2.5rem] p-6 md:p-12 relative shadow-sm border border-[var(--color-brand-border)] min-h-[85vh] flex flex-col">
         {/* Docs Header Content */}
         <div className="my-10 text-center md:text-left max-w-4xl">
@@ -22,7 +24,7 @@ export default async function DocsListingPage() {
             Internal Documentation
           </h1>
           <p className="text-lg md:text-xl text-[var(--color-brand-text-muted)] font-medium leading-relaxed">
-            Private documentation and API response data.
+            Private documentation
           </p>
         </div>
 

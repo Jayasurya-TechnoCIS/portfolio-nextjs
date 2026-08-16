@@ -1,14 +1,24 @@
-import axios from "axios";
-
 const BASE_URL = "https://cms.technocis.in/items";
 const TOKEN = "YgTkVTDNtrKOPBmKb1yijGe2x0MBy_IC";
 
-const api = axios.create({
-  baseURL: BASE_URL,
-  headers: {
-    Authorization: `Bearer ${TOKEN}`,
-  },
-});
+const fetchApi = async <T>(endpoint: string): Promise<T | null> => {
+  try {
+    const response = await fetch(`${BASE_URL}${endpoint}`, {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+      },
+      cache: "no-store",
+    });
+    if (!response.ok) {
+      throw new Error(`API returned ${response.status}`);
+    }
+    const json = await response.json();
+    return json.data as T;
+  } catch (error) {
+    console.error(`Error fetching ${endpoint}:`, error);
+    return null;
+  }
+};
 
 export interface Blog {
   id: number;
@@ -44,41 +54,21 @@ export enum DocType {
 }
 
 export const getAllBlogs = async (): Promise<Blog[]> => {
-  try {
-    const response = await api.get<{ data: Blog[] }>("/blog");
-    return response.data?.data || [];
-  } catch (error) {
-    console.error("Error fetching all blogs:", error);
-    return [];
-  }
+  const data = await fetchApi<Blog[]>("/blog");
+  return data || [];
 };
 
 export const getBlogById = async (id: number | string): Promise<Blog | null> => {
-  try {
-    const response = await api.get<{ data: Blog }>(`/blog/${id}`);
-    return response.data?.data || null;
-  } catch (error) {
-    console.error(`Error fetching blog by ID ${id}:`, error);
-    return null;
-  }
+  const data = await fetchApi<Blog>(`/blog/${id}`);
+  return data || null;
 };
 
 export const getAllDocs = async (): Promise<Docs[]> => {
-  try {
-    const response = await api.get<{ data: Docs[] }>("/docs");
-    return response.data?.data || [];
-  } catch (error) {
-    console.error("Error fetching all docs:", error);
-    return [];
-  }
+  const data = await fetchApi<Docs[]>("/docs");
+  return data || [];
 };
 
 export const getDocsById = async (id: number | string): Promise<Docs | null> => {
-  try {
-    const response = await api.get<{ data: Docs }>(`/docs/${id}`);
-    return response.data?.data || null;
-  } catch (error) {
-    console.error(`Error fetching docs by ID ${id}:`, error);
-    return null;
-  }
+  const data = await fetchApi<Docs>(`/docs/${id}`);
+  return data || null;
 };
