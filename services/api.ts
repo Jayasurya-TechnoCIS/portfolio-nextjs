@@ -35,15 +35,7 @@ export interface Docs {
   title: string;
   content: string;
   type: DocType;
-  project: ProjectType;
-}
-
-export enum ProjectType {
-  ANGULAR = "Angular",
-  JAVASCRIPT = "Javascript",
-  NEXT_JS = "Next JS",
-  REACT = "React",
-  TAILWIND = "Tailwind",
+  project: string;
 }
 
 export enum DocType {
